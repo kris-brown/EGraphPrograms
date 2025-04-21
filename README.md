@@ -63,6 +63,30 @@ end
 
 where `EId` is a synonym for `Int`.
 
+The data structure for an e-graph is the following:
+
+```julia 
+"""
+Stores a congruent partial equivalence relation on terms.
+
+`eqrel` is an equivalence relation on eclass ids
+`eclasses` sends each eclass id to its `EClass` data
+`hashcons` assigns each eterm an eclass id 
+`worklist` - e-class ids which have been merged but not yet rebuilt
+`isclean` - is the Egraph safe to read from
+"""
+struct EGraph
+  eqrel::IntDisjointSets{EId}
+  eclasses::Dict{EId, EClass}
+  hashcons::Dict{ETerm, EId}
+  worklist::Vector{EId}
+  isclean::Ref{Bool}
+  function EGraph()
+    new(IntDisjointSets{EId}(0), Dict{EId, EClass}(),
+        Dict{ETerm, EId}(), EId[], Ref(true))
+  end
+end
+```
 
 ## Programs 
 
