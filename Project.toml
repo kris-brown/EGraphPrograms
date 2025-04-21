@@ -1,0 +1,23 @@
+name = "EGraphPrograms"
+uuid = "5a99e814-f9cf-4d65-bb59-2a95b0e3166b"
+authors = ["Kris Brown"]
+version = "0.0.1"
+
+[deps]
+DataStructures = "864edb3b-99cc-5e75-8d2d-829cb0a9cfe8"
+MLStyle = "d8e11817-5142-5d16-987a-aa16d5891078"
+Reexport = "189a3867-3050-52da-a836-e630ba90ab69"
+StructEquality = "6ec83bb0-ed9f-11e9-3b4c-2b04cb4e219c"
+
+[weakdeps]
+Catlab = "134e5e36-593f-5add-ad60-77f754baafbe"
+GATlab = "f0ffcf3b-d13a-433e-917c-cc44ccf5ead2"
+
+[extensions]
+EGraphCatlabExt = "Catlab"
+EGraphGATlabExt = "GATlab"
+
+[compat]
+DataStructures = "0.18.22"
+Reexport = "1.2.2"
+StructEquality = "2.1.0"

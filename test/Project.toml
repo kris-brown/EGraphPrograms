@@ -1,0 +1,5 @@
+[deps]
+Catlab = "134e5e36-593f-5add-ad60-77f754baafbe"
+EGraphPrograms = "5a99e814-f9cf-4d65-bb59-2a95b0e3166b"
+GATlab = "f0ffcf3b-d13a-433e-917c-cc44ccf5ead2"
+MLStyle = "d8e11817-5142-5d16-987a-aa16d5891078"
